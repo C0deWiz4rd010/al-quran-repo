@@ -10,3 +10,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Local dev server logs
+*.log
+
+# Local archives
+*.zip

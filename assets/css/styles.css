@@ -505,6 +505,103 @@
         .audio-info { flex: 1; min-width: 0; font-size: 0.75rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .audio-close { width: 28px; height: 28px; border-radius: 50%; border: none; background: transparent; cursor: pointer; color: var(--text-muted); font-size: 1rem; flex-shrink: 0; }
 
+        .seo-intro {
+            max-width: var(--max-width);
+            margin: 0 auto 20px;
+            padding: 20px 16px 4px;
+            position: relative;
+            z-index: 1;
+        }
+        .seo-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .seo-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            line-height: 1.1;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+        .seo-lead {
+            max-width: 70ch;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 18px;
+        }
+        .seo-link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+        .seo-link-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 16px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: linear-gradient(180deg, var(--bg-card), var(--bg-elevated));
+            box-shadow: var(--shadow-sm);
+            text-decoration: none;
+            color: inherit;
+            transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+        }
+        .seo-link-card strong {
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+        .seo-link-card span {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        .seo-link-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow-md);
+        }
+        .seo-intro-noscript { padding-bottom: 24px; }
+        .seo-intro[hidden] { display: none !important; }
+        .seo-intro.is-compact {
+            padding-top: 6px;
+            padding-bottom: 0;
+            margin-bottom: 8px;
+        }
+        .seo-intro.is-compact .seo-eyebrow {
+            margin-bottom: 8px;
+            padding: 4px 10px;
+            font-size: 0.68rem;
+        }
+        .seo-intro.is-compact .seo-title {
+            font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+            margin-bottom: 6px;
+        }
+        .seo-intro.is-compact .seo-lead {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            max-width: 62ch;
+        }
+        .seo-intro.is-compact .seo-link-grid {
+            display: none;
+        }
+
+        .surah-card,
+        .juz-chip,
+        .search-result-item {
+            text-decoration: none;
+            color: inherit;
+        }
+
         .bottom-nav {
             position: fixed;
             bottom: var(--safe-bottom);
